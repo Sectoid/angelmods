@@ -103,7 +103,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
       {
         type = "recipe",
         name = "angels-plate-brass",
-        localised_name = { "item-name.brass-alloy" },
+        localised_name = { "item-name.bob-brass-alloy" },
         category = "casting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -112,7 +112,7 @@ if angelsmods.trigger.smelting_products["brass"].plate then
           { type = "fluid", name = "liquid-molten-brass", amount = 40 },
         },
         results = {
-          { type = "item", name = "brass-alloy", amount = 4 },
+          { type = "item", name = "bob-brass-alloy", amount = 4 },
         },
         order = "b[brass]-b[brass-alloy]",
       },
@@ -202,10 +202,10 @@ if angelsmods.trigger.smelting_products["brass"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
-    data.raw["item"]["brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
-    data.raw["item"]["brass-alloy"].icon_size = 32
-    OV.disable_recipe({ "brass-alloy" })
+    angelsmods.functions.move_item("bob-brass-alloy", "angels-alloys-casting", "b[brass]-b[brass-alloy]")
+    data.raw["item"]["bob-brass-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-brass.png"
+    data.raw["item"]["bob-brass-alloy"].icon_size = 32
+    OV.disable_recipe({ "bob-brass-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-brass")
     OV.add_prereq("bob-zinc-processing", "angels-brass-smelting-1")
   end

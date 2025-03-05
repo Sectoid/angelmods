@@ -9,7 +9,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["invar"].plate then
   if mods["bobplates"] then
-    OV.hide_recipe("invar-alloy")
+    OV.hide_recipe("bob-invar-alloy")
     data:extend({
       --INVAR
       --ITEMS
@@ -53,7 +53,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
       {
         type = "recipe",
         name = "angels-plate-invar",
-        localised_name = { "item-name.invar-alloy" },
+        localised_name = { "item-name.bob-invar-alloy" },
         category = "casting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -62,7 +62,7 @@ if angelsmods.trigger.smelting_products["invar"].plate then
           { type = "fluid", name = "liquid-molten-invar", amount = 40 },
         },
         results = {
-          { type = "item", name = "invar-alloy", amount = 4 },
+          { type = "item", name = "bob-invar-alloy", amount = 4 },
         },
         order = "d[invar]-b[invar-alloy]",
       },
@@ -98,9 +98,9 @@ if angelsmods.trigger.smelting_products["invar"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("invar-alloy", "angels-alloys-casting", "d[invar]-b[invar-alloy]")
-    data.raw["item"]["invar-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-invar.png"
-    data.raw["item"]["invar-alloy"].icon_size = 32
+    angelsmods.functions.move_item("bob-invar-alloy", "angels-alloys-casting", "d[invar]-b[invar-alloy]")
+    data.raw["item"]["bob-invar-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-invar.png"
+    data.raw["item"]["bob-invar-alloy"].icon_size = 32
     OV.global_replace_technology("bob-invar-processing", "angels-invar-smelting-1")
     angelsmods.functions.allow_productivity("angels-plate-invar")
   end

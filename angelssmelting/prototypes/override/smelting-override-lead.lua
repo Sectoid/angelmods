@@ -22,12 +22,12 @@ if angelsmods.trigger.smelting_products["lead"].ingot then
 
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-lead-oxide", "lead-oxide")
+    OV.global_replace_item("solid-lead-oxide", "bob-lead-oxide")
     angelsmods.functions.hide("solid-lead-oxide")
-    angelsmods.functions.move_item("lead-oxide", "angels-lead", "d")
-    data.raw["item"]["lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
-    data.raw["item"]["lead-oxide"].icon_size = 32
-    OV.hide_recipe({ "bob-lead-plate", "lead-oxide", "lead-oxide-2" })
+    angelsmods.functions.move_item("bob-lead-oxide", "angels-lead", "d")
+    data.raw["item"]["bob-lead-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-lead-oxide.png"
+    data.raw["item"]["bob-lead-oxide"].icon_size = 32
+    OV.hide_recipe({ "bob-lead-plate", "bob-lead-oxide", "bob-lead-oxide-2" })
     OV.global_replace_technology("bob-lead-processing", "angels-lead-smelting-1")
   end
 
@@ -86,12 +86,12 @@ if angelsmods.trigger.smelting_products["lead"].plate then
 
     OV.patch_recipes({
       {
-        name = "lead-plate",
+        name = "bob-lead-plate",
         energy_required = 10.5,
         enabled = false,
         hidden = true,
         ingredients = {
-          { name = "lead-ore", type = "item", amount = "+3" },
+          { name = "bob-lead-ore", type = "item", amount = "+3" },
         },
         results = {
           { name = "bob-lead-plate", type = "item", amount = "+2" },
@@ -99,6 +99,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
         icons = {
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/plate-lead.png",
+            icon_size = 32,
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/ore-lead.png",
@@ -111,7 +112,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
         order = "k[angels-plate-lead]-b",
       },
     })
-    OV.remove_unlock("ore-crushing", "lead-plate")
+    OV.remove_unlock("ore-crushing", "bob-lead-plate")
   end
 else
   angelsmods.functions.hide("angels-plate-lead")

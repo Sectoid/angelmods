@@ -51,7 +51,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
       {
         type = "recipe",
         name = "angels-plate-gunmetal",
-        localised_name = { "item-name.gunmetal-alloy" },
+        localised_name = { "item-name.bob-gunmetal-alloy" },
         category = "casting-2",
         subgroup = "angels-alloys-casting",
         energy_required = 4,
@@ -60,7 +60,7 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
           { type = "fluid", name = "liquid-molten-gunmetal", amount = 40 },
         },
         results = {
-          { type = "item", name = "gunmetal-alloy", amount = 4 },
+          { type = "item", name = "bob-gunmetal-alloy", amount = 4 },
         },
         order = "c[gunmetal]-b[gunmetal-alloy]",
       },
@@ -96,10 +96,10 @@ if angelsmods.trigger.smelting_products["gunmetal"].plate then
         order = "c-a",
       },
     })
-    angelsmods.functions.move_item("gunmetal-alloy", "angels-alloys-casting", "c[gunmetal]-b[gunmetal-alloy]")
-    data.raw["item"]["gunmetal-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gunmetal.png"
-    data.raw["item"]["gunmetal-alloy"].icon_size = 32
-    OV.disable_recipe({ "gunmetal-alloy" })
+    angelsmods.functions.move_item("bob-gunmetal-alloy", "angels-alloys-casting", "c[gunmetal]-b[gunmetal-alloy]")
+    data.raw["item"]["bob-gunmetal-alloy"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-gunmetal.png"
+    data.raw["item"]["bob-gunmetal-alloy"].icon_size = 32
+    OV.disable_recipe({ "bob-gunmetal-alloy" })
     angelsmods.functions.allow_productivity("angels-plate-gunmetal")
 
     if mods["bobwarfare"] then

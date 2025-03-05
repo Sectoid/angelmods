@@ -32,7 +32,7 @@ if angelsmods.trigger.smelting_products["tin"].ingot then
     end
   end
   if mods["bobelectronics"] and mods["bobplates"] then --this is the minimum combo to make insulated wire to use tinned wire
-    OV.add_prereq("electronics", "angels-tin-smelting-1")
+    OV.add_prereq("bob-electronics", "angels-tin-smelting-1")
   end
 else
   angelsmods.functions.hide("processed-tin")
@@ -83,6 +83,7 @@ if angelsmods.trigger.smelting_products["tin"].plate then
         icons = {
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/plate-tin.png",
+            icon_size = 32,
           },
           {
             icon = "__angelssmeltinggraphics__/graphics/icons/ore-tin.png",
@@ -123,8 +124,8 @@ if angelsmods.trigger.smelting_products["tin"].wire then
       },
     },
   })
-  OV.add_unlock("electronics", "basic-tinned-copper-wire")
-  OV.remove_prereq("electronics", "angels-tin-smelting-1")
+  OV.add_unlock("bob-electronics", "basic-tinned-copper-wire")
+  OV.remove_prereq("bob-electronics", "angels-tin-smelting-1")
 
   if data.raw.item["tinned-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-tin", "tinned-copper-cable")
@@ -143,11 +144,11 @@ if angelsmods.trigger.smelting_products["tin"].wire then
     OV.patch_recipes({
       {
         name = "basic-tinned-copper-wire",
-        category = "electronics",
+        category = "bob-electronics",
       },
       {
         name = "angels-wire-coil-tin-converting",
-        category = "electronics-machine",
+        category = "bob-electronics-machine",
       },
     })
   end

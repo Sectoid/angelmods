@@ -19,30 +19,30 @@ end
 if angelsmods.trigger.smelting_products["tungsten"].powder then
   -- REPLACE ITEMS (use angel version)
   if mods["bobplates"] then
-    OV.converter_fluid("tungstic-acid", "liquid-tungstic-acid")
-    angelsmods.functions.disable_barreling_recipes("tungstic-acid")
-    OV.disable_recipe({ "tungstic-acid" })
+    OV.converter_fluid("bob-tungstic-acid", "liquid-tungstic-acid")
+    angelsmods.functions.disable_barreling_recipes("bob-tungstic-acid")
+    OV.disable_recipe({ "bob-tungstic-acid" })
   end
 
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
-    OV.global_replace_item("solid-tungsten-oxide", "tungsten-oxide")
+    OV.global_replace_item("solid-tungsten-oxide", "bob-tungsten-oxide")
     angelsmods.functions.hide("solid-tungsten-oxide")
-    angelsmods.functions.move_item("tungsten-oxide", "angels-tungsten", "d")
-    data.raw["item"]["tungsten-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png"
-    data.raw["item"]["tungsten-oxide"].icon_size = 32
-    data.raw["item"]["tungsten-oxide"].localised_name = { "item-name.solid-tungsten-oxide" }
-    OV.disable_recipe({ "tungsten-oxide" })
+    angelsmods.functions.move_item("bob-tungsten-oxide", "angels-tungsten", "d")
+    data.raw["item"]["bob-tungsten-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-tungsten-oxide.png"
+    data.raw["item"]["bob-tungsten-oxide"].icon_size = 32
+    data.raw["item"]["bob-tungsten-oxide"].localised_name = { "item-name.solid-tungsten-oxide" }
+    OV.disable_recipe({ "bob-tungsten-oxide" })
   end
 
   if mods["bobplates"] then
-    OV.global_replace_item("powder-tungsten", "powdered-tungsten")
+    OV.global_replace_item("powder-tungsten", "bob-powdered-tungsten")
     angelsmods.functions.hide("powder-tungsten")
-    angelsmods.functions.move_item("powdered-tungsten", "angels-tungsten", "h")
-    data.raw["item"]["powdered-tungsten"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png"
-    data.raw["item"]["powdered-tungsten"].icon_size = 64
-    data.raw["item"]["powdered-tungsten"].localised_name = { "item-name.powder-tungsten" }
-    OV.disable_recipe({ "powdered-tungsten" })
+    angelsmods.functions.move_item("bob-powdered-tungsten", "angels-tungsten", "h")
+    data.raw["item"]["bob-powdered-tungsten"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-tungsten.png"
+    data.raw["item"]["bob-powdered-tungsten"].icon_size = 64
+    data.raw["item"]["bob-powdered-tungsten"].localised_name = { "item-name.powder-tungsten" }
+    OV.disable_recipe({ "bob-powdered-tungsten" })
   end
 else
   angelsmods.functions.hide("processed-tungsten")
@@ -67,14 +67,14 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
     data.raw["item"]["bob-tungsten-plate"].icon = "__angelssmeltinggraphics__/graphics/icons/plate-tungsten.png"
     data.raw["item"]["bob-tungsten-plate"].icon_size = 32
     OV.disable_recipe({ "bob-tungsten-plate" })
-    OV.add_prereq("tungsten-processing", "angels-tungsten-smelting-1")
+    OV.add_prereq("bob-tungsten-processing", "angels-tungsten-smelting-1")
   end
 
   if mods["bobplates"] then
-    angelsmods.functions.move_item("tungsten-carbide", "angels-tungsten-casting", "k")
+    angelsmods.functions.move_item("bob-tungsten-carbide", "angels-tungsten-casting", "k")
     OV.patch_recipes({
       {
-        name = "tungsten-carbide",
+        name = "bob-tungsten-carbide",
         subgroup = "angels-tungsten-casting",
         order = "k[tungsten-carbide]-a",
         icons = angelsmods.functions.add_number_icon_layer({
@@ -86,7 +86,7 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
         }, 1, angelsmods.smelting.number_tint),
       },
       {
-        name = "tungsten-carbide-2",
+        name = "bob-tungsten-carbide-2",
         subgroup = "angels-tungsten-casting",
         order = "k[tungsten-carbide]-b",
         icons = angelsmods.functions.add_number_icon_layer({
@@ -101,7 +101,7 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
   end
 
   if mods["bobplates"] then
-    angelsmods.functions.move_item("copper-tungsten-alloy", "angels-tungsten-casting", "l")
+    angelsmods.functions.move_item("bob-copper-tungsten-alloy", "angels-tungsten-casting", "l")
   end
 
   if mods["angelsindustries"] and angelsmods.industries.tech then
@@ -137,9 +137,9 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   local alloy_recipes = {
-    "tungsten-carbide",
-    "tungsten-carbide-2",
-    "copper-tungsten-alloy",
+    "bob-tungsten-carbide",
+    "bob-tungsten-carbide-2",
+    "bob-copper-tungsten-alloy",
   }
 
   for _, name in pairs(alloy_recipes) do
