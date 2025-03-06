@@ -3,7 +3,7 @@ local move_item = angelsmods.functions.move_item
 
 if mods["bobtech"] and settings.startup["bobmods-burnerphase"].value then
   OV.add_prereq("bio-wood-processing", "automation-science-pack")
-  OV.add_prereq("bio-processing-brown", "electricity")
+  OV.add_prereq("bio-processing-brown", "bob-electricity")
 end
 
 if mods["bobplates"] then
@@ -44,11 +44,11 @@ if mods["bobplates"] then
   end
 
   -- GEMS
-  OV.add_prereq("bio-processing-alien-3", "gem-processing-2")
+  OV.add_prereq("bio-processing-alien-3", "bob-gem-processing-2")
 
   -- CRYSTALS
   OV.modify_input("crystal-grindstone", { "bob-grinding-wheel", "iron-plate" })
-  OV.add_prereq("bio-processing-crystal-splinter-1", "grinding")
+  OV.add_prereq("bio-processing-crystal-splinter-1", "bob-grinding")
 end
 
 -- everything below this should be rewritten and organized as it's becomming a mess
@@ -58,35 +58,35 @@ if bobmods then
   })
 end
 
-if mods["bobassembly"] and data.raw.technology["basic-automation"] then
+if mods["bobassembly"] and data.raw.technology["bob-electronics"] then
   OV.remove_prereq("bio-processing-brown", "automation")
-  OV.add_prereq("bio-processing-brown", "basic-automation")
+  OV.add_prereq("bio-processing-brown", "electronics")
   OV.remove_prereq("basic-chemistry", "automation")
-  OV.add_prereq("basic-chemistry", "basic-automation")
+  OV.add_prereq("basic-chemistry", "electronics")
 end
 
 if mods["bobelectronics"] then
   OV.patch_recipes({
     {
-      name = "wooden-board",
-      results = {{ type = "item", name = "wooden-board", amount = 1 }},
+      name = "bob-wooden-board",
+      results = {{ type = "item", name = "bob-wooden-board", amount = 1 }},
     },
   })
-  angelsmods.functions.remove_productivity("wooden-board")
+  angelsmods.functions.remove_productivity("bob-wooden-board")
 
   OV.patch_recipes({
     {
-      name = "phenolic-board",
+      name = "bob-phenolic-board",
       energy_required = 2,
       ingredients = {
         { "!!" },
         { type = "fluid", name = "liquid-resin", amount = 10 },
         { type = "item", name = "solid-paper", amount = 5 },
       },
-      category = "electronics-with-fluid",
+      category = "bob-electronics-with-fluid",
     },
   })
   OV.add_prereq("advanced-circuit", "bio-paper-1")
   OV.add_prereq("advanced-circuit", "resins")
-  angelsmods.functions.remove_productivity("phenolic-board")
+  angelsmods.functions.remove_productivity("bob-phenolic-board")
 end
