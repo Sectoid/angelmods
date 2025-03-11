@@ -88,6 +88,7 @@ data:extend({
         },
       },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -211,6 +212,7 @@ data:extend({
         },
       },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -334,6 +336,7 @@ data:extend({
         },
       },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
@@ -456,6 +459,7 @@ data:extend({
         },
       },
     },
+    forced_symmetry = "horizontal",
     fluid_boxes = {
       {
         production_type = "input",
