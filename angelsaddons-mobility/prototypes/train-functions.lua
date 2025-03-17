@@ -285,11 +285,12 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, technology_
 
       table.insert(recipes, copy)
 
+      local cur_technology_name = technology_name
       if i > 1 then
-        technology_name = technology_name .. "-" .. i
+        cur_technology_name = technology_name .. "-" .. i
       end
 
-      add_recipe_unlock(technology_name, recipe_name)
+      add_recipe_unlock(cur_technology_name, recipe_name)
     end
   else
     ref_recipe.ingredients = generate_tiered_ingredients(1, tiered_ingredients)
