@@ -70,7 +70,10 @@ if angelsmods.addons.mobility.crawlertrain.enabled then
         },
         time = 30,
       },
-      prerequisites = { "rocket-control-unit", "logistic-system" },
+      prerequisites = {
+        mods["bobplate"] and "bob-advanced-processing-unit" or "processing-unit",
+        "logistic-system"
+      },
     },
   }
 
