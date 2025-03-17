@@ -6,7 +6,7 @@ if angelsmods.addons.storage.silos or angelsmods.addons.storage.oresilos then
       icon = "__angelsaddons-storage__/graphics/technology/silo-tech.png",
       icon_size = 128,
       prerequisites = {
-        "steel-processing",
+        mods["angelssmelting"] and "angels-steel-smelting-1" or "steel-processing",
       },
       effects = {
         {
