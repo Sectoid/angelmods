@@ -99,8 +99,8 @@ script.on_event({ defines.events.on_lua_shortcut, "toggle-ghosting" }, function(
   local player = game.players[event.player_index]
   if player and player.valid then
     local force = player.force
-    local toggled = force.ghost_time_to_live == 0
-    force.ghost_time_to_live = toggled and 60 * 60 * 60 * 24 * 7 or 0
+    local toggled = force.create_ghost_on_entity_death
+    force.create_ghost_on_entity_death = not force.create_ghost_on_entity_death
 
     for _, fplayer in pairs(force.players) do
       fplayer.set_shortcut_toggled(input, toggled)

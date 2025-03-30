@@ -151,7 +151,7 @@ function tech_archive:on_player_respawned(player_index)
       or false
     player.set_shortcut_available("toggle-ghosting", available)
     if available then
-      player.set_shortcut_toggled("toggle-ghosting", force.ghost_time_to_live == 0)
+      player.set_shortcut_toggled("toggle-ghosting", force.create_ghost_on_entity_death)
     end
   end
 end

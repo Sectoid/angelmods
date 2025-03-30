@@ -2,7 +2,8 @@ data:extend({
   {
     type = "custom-input",
     name = "toggle-ghosting",
-    key_sequence = "ALT + G",
+    -- TODO: Change to something not clashing with 2.0 keybindings (was ALT + G)
+    key_sequence = "",
     consuming = "game-only",
     action = "lua",
   },
