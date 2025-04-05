@@ -56,7 +56,7 @@ data:extend({
       pipe_connections = {
         {
           flow_direction = "output",
-          position = { 0, 0.4 },
+          position = { 0, 0 },
           direction = defines.direction.south
         },
       },
