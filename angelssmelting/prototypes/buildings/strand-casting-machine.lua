@@ -1,3 +1,41 @@
+local function angels_strand_casting_machine_fluid_boxes()
+  return {
+      {
+        production_type = "input",
+        --pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
+      },
+      {
+        production_type = "input",
+        --pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
+      },
+      {
+        production_type = "input",
+        --pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 1000,
+        pipe_connections = {
+          { flow_direction = "input", position = { -1, -2 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        --pipe_picture = assembler3pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
+        },
+      },
+    }
+end
+
+
 data:extend({
   {
     type = "item",
@@ -44,40 +82,7 @@ data:extend({
     },
     energy_usage = "150kW",
     --ingredient_count = 2,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
       working_visualisations = {
@@ -198,40 +203,7 @@ data:extend({
     },
     energy_usage = "200kW",
     --ingredient_count = 4,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
       working_visualisations = {
@@ -352,40 +324,7 @@ data:extend({
     },
     energy_usage = "250kW",
     --ingredient_count = 6,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
       working_visualisations = {
@@ -505,40 +444,7 @@ data:extend({
     },
     energy_usage = "250kW",
     --ingredient_count = 6,
-    fluid_boxes = {
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = {
-          { flow_direction = "input", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        --pipe_picture = assembler3pipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_strand_casting_machine_fluid_boxes(),
     impact_category = "metal",
     graphics_set = {
       working_visualisations = {
