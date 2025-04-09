@@ -1,3 +1,40 @@
+local function angels_filtration_unit_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = angelsmods.refining.filtrationpipepictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { 1, 2 }, direction = defines.direction.south } },
+    },
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = angelsmods.refining.filtrationpipepictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { -1, 2 }, direction = defines.direction.south } },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = angelsmods.refining.filtrationpipepictures(),
+      volume = 100,
+      pipe_connections = {
+        { flow_direction = "output", position = { 1, -2 }, direction = defines.direction.north },
+      },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = angelsmods.refining.filtrationpipepictures(),
+      volume = 100,
+      pipe_connections = {
+        { flow_direction = "output", position = { -1, -2 }, direction = defines.direction.north },
+      },
+    },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -59,40 +96,7 @@ data:extend({
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_filtration_unit_fluid_boxes(),
   },
   {
     type = "item",
@@ -154,40 +158,7 @@ data:extend({
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_filtration_unit_fluid_boxes(),
   },
   {
     type = "item",
@@ -248,39 +219,6 @@ data:extend({
       sound = { filename = "__base__/sound/oil-refinery.ogg" },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { -1, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        pipe_picture = angelsmods.refining.filtrationpipepictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_filtration_unit_fluid_boxes(),
   },
 })
