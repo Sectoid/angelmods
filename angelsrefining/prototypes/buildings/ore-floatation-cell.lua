@@ -31,6 +31,27 @@ local function floatationpipepictures()
   }
 end
 
+local function angels_floatation_cell_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_picture = floatationpipepictures(),
+      pipe_covers = pipecoverspictures(),
+      volume = 1000,
+      pipe_connections = { { flow_direction = "input", position = { 0, 2 }, direction = defines.direction.south } },
+    },
+    {
+      production_type = "output",
+      pipe_picture = floatationpipepictures(),
+      pipe_covers = pipecoverspictures(),
+      volume = 100,
+      pipe_connections = {
+        { flow_direction = "output", position = { 0, -2 }, direction = defines.direction.north },
+      },
+    },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -290,24 +311,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = floatationpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_picture = floatationpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_floatation_cell_fluid_boxes(),
   },
   {
     type = "item",
@@ -567,24 +571,7 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = floatationpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_picture = floatationpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_floatation_cell_fluid_boxes(),
   },
   {
     type = "item",
@@ -843,23 +830,6 @@ data:extend({
       sound = { filename = "__angelsrefininggraphics__/sound/ore-floatation-cell.ogg", volume = 1 },
       idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_picture = floatationpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 1000,
-        pipe_connections = { { flow_direction = "input", position = { 0, 2.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_picture = floatationpipepictures(),
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -2.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_floatation_cell_fluid_boxes(),
   },
 })
