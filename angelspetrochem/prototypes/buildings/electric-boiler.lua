@@ -5,6 +5,36 @@ local extra_loss = 0.04 -- % of total power
 
 local dissipation_factor = 1 / (1 - extra_loss)
 
+local function angels_electric_boiler_fluid_boxes()
+  return {
+    {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      volume = 200,
+      pipe_connections = {
+        { flow_direction = "input-output", position = { -1, 0 }, direction = defines.direction.west },
+        { flow_direction = "input-output", position = { 1, 0 }, direction = defines.direction.east },
+      },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      volume = 100,
+      pipe_connections = {
+        { flow_direction = "output", position = { 0, -1 }, direction = defines.direction.north },
+      },
+    },
+    {
+      production_type = "output",
+      pipe_covers = pipecoverspictures(),
+      volume = 100,
+      pipe_connections = {
+        { flow_direction = "output", position = { 0, 1 }, direction = defines.direction.south },
+      },
+    },
+  }
+end
+
 data:extend({
   {
     type = "item",
@@ -122,33 +152,7 @@ data:extend({
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 200,
-        pipe_connections = {
-          { flow_direction = "input-output", position = { -1.29, 0 }, direction = defines.direction.west },
-          { flow_direction = "input-output", position = { 1.29, 0 }, direction = defines.direction.east },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -1.29 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.29 }, direction = defines.direction.south },
-        },
-      },
-    },
+    fluid_boxes = angels_electric_boiler_fluid_boxes(),
   },
   {
     type = "item",
@@ -269,33 +273,7 @@ data:extend({
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 200,
-        pipe_connections = {
-          { flow_direction = "input-output", position = { -1.29, 0 }, direction = defines.direction.west },
-          { flow_direction = "input-output", position = { 1.29, 0 }, direction = defines.direction.east },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -1.29 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.29 }, direction = defines.direction.south },
-        },
-      },
-    },
+    fluid_boxes = angels_electric_boiler_fluid_boxes(),
   },
   {
     type = "item",
@@ -412,32 +390,6 @@ data:extend({
       fade_in_ticks = 4,
       fade_out_ticks = 20,
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 200,
-        pipe_connections = {
-          { flow_direction = "input-output", position = { -1.29, 0 }, direction = defines.direction.east },
-          { flow_direction = "input-output", position = { 1.29, 0 }, direction = defines.direction.west },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, -1.29 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.29 }, direction = defines.direction.south },
-        },
-      },
-    },
+    fluid_boxes = angels_electric_boiler_fluid_boxes(),
   },
 })

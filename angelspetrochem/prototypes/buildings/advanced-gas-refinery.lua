@@ -1,3 +1,52 @@
+local function angels_advanced_gas_refinery_fluid_boxes()
+  return {
+      {
+        production_type = "input",
+        pipe_covers = pipecoverspictures(),
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { -1, 3 }, direction = defines.direction.south } },
+      },
+      {
+        production_type = "input",
+        pipe_covers = pipecoverspictures(),
+        volume = 50,
+        pipe_connections = { { flow_direction = "input", position = { 1, 3 }, direction = defines.direction.south } },
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -3, -3 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { -1, -3 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 1, -3 }, direction = defines.direction.north },
+        },
+      },
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections = {
+          { flow_direction = "output", position = { 3, -3 }, direction = defines.direction.north },
+        },
+      },
+    }
+end
+
 data:extend({
   --ADVANCED REFINERY
   {
@@ -266,52 +315,7 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_advanced_gas_refinery_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
@@ -584,52 +588,7 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_advanced_gas_refinery_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
@@ -902,52 +861,7 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_advanced_gas_refinery_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
@@ -1219,52 +1133,7 @@ data:extend({
         },
       },
     },
-    fluid_boxes = {
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { -1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "input",
-        pipe_covers = pipecoverspictures(),
-        volume = 50,
-        pipe_connections = { { flow_direction = "input", position = { 1, 3.4 }, direction = defines.direction.south } },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { -1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 1, -3.4 }, direction = defines.direction.north },
-        },
-      },
-      {
-        production_type = "output",
-        pipe_covers = pipecoverspictures(),
-        volume = 100,
-        pipe_connections = {
-          { flow_direction = "output", position = { 3, -3.4 }, direction = defines.direction.north },
-        },
-      },
-    },
+    fluid_boxes = angels_advanced_gas_refinery_fluid_boxes(),
     impact_category = "metal",
     working_sound = {
       sound = { filename = "__angelspetrochemgraphics__/sound/gas-refinery.ogg", volume = 0.5 },
