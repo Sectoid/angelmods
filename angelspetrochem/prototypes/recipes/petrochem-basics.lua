@@ -10,7 +10,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "water", amount = 40 },
+      { type = "fluid", name = "water", amount = 4 },
     },
     results = {
       { type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2 },
@@ -37,7 +37,7 @@ data:extend({
     energy_required = 1,
     enabled = false,
     ingredients = {
-      { type = "fluid", name = "water-purified", amount = 40 },
+      { type = "fluid", name = "water-purified", amount = 4 },
     },
     results = {
       { type = "fluid", name = "steam", amount = 40, temperature = 165, fluidbox_index = 2 },
@@ -844,7 +844,7 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "liquid-water-heavy", amount = 5, temperature = 100, fluidbox_index = 1 },
-      { type = "fluid", name = "steam", amount = 95, temperature = 125, fluidbox_index = 2 },
+      { type = "fluid", name = "steam", amount = 950, temperature = 125, fluidbox_index = 2 },
     },
     main_product = "liquid-water-heavy",
     icons = AF.create_liquid_recipe_icon(
