@@ -26,6 +26,8 @@ data:extend({
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "temperate-farming", "desert-farming", "swamp-farming", "basic-farming" },
     crafting_speed = 1,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["assembling-machine"],
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -110,6 +112,8 @@ data:extend({
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "temperate-farming", "advanced-temperate-farming" },
     crafting_speed = 2,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["assembling-machine"],
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -194,6 +198,8 @@ data:extend({
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "desert-farming", "advanced-desert-farming" },
     crafting_speed = 2,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["assembling-machine"],
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -278,6 +284,8 @@ data:extend({
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "swamp-farming", "advanced-swamp-farming" },
     crafting_speed = 2,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["assembling-machine"],
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

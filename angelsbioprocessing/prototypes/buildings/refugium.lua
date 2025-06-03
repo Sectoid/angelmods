@@ -28,6 +28,8 @@ data:extend({
     allowed_effects = { "consumption", "speed", "productivity", "pollution" },
     crafting_categories = { "bio-refugium-fish" },
     crafting_speed = 0.75,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["assembling-machine"],
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
