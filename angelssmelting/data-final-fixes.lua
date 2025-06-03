@@ -13,4 +13,4 @@ angelsmods.functions.OV.execute()
 --     data.raw['technology'][techName].unit = nil
 -- end
 
-data.raw.technology['uranium-processing'].research_trigger = {type = 'craft-fluid', fluid = 'sulfuric-acid'}
+data.raw.technology['uranium-processing'].research_trigger = {type = 'craft-fluid', fluid = 'liquid-sulfuric-acid'}
